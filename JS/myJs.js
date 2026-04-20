@@ -85,3 +85,11 @@ do {
   document.writeln(whileTxt);
   whileTxt++;
 } while (i > 2);
+
+// Try Catch Finally
+try {
+} catch {
+} finally {
+}
+
+// Throw "text";

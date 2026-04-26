@@ -12,9 +12,45 @@ function sumAlert() {
   var c = x + y;
   alert(c);
 }
+
 function Minus(x, y) {
   return x - y;
 }
+var c = Minus(10, 6);
+console.log(c);
+
+// Self Invoke
+(function () {
+  // alert("Loaded ...");
+})();
+
+// Arrow Function
+var sum2 = (a, b) => a + b;
+const sum3 = (x, y) => {
+  return x * y;
+};
+alert(sum2(7, 8));
+
+function Sum4(x, y) {
+  if (x === undefined) {
+    x = 0;
+  }
+  if (y === undefined) {
+    y = 0;
+  }
+  return x + y;
+}
+function Sum5(x = 1, y = 1) {
+  return x + y;
+}
+
+// Arguments
+function MyFunction1() {
+  for (var i = 0; i < arguments.length; i++) {
+    console.log(arguments[i]);
+  }
+}
+MyFunction1(4, "Nila", true);
 
 // Arrays
 var Names = ["Vousi", "Ahmz", "Shvi"];
@@ -93,3 +129,46 @@ try {
 }
 
 // Throw "text";
+
+// This (Owner)
+var firstName = "Hana";
+var personName = {
+  firstName: "Iman",
+  FullName: function () {
+    return this.firstName;
+  },
+};
+
+// Let (Inner Access)
+let x = 12;
+{
+  let x = 15;
+  alert(x);
+}
+alert(x);
+
+// Const (No Change)
+const Price = 25000;
+
+// Debug
+debugger;
+
+// Validation
+function MyFunction() {
+  var x = document.forms["myForm"]["fname"].value;
+  if (x == "") {
+    alert("Please Enter Name ");
+    return false;
+  }
+}
+
+// Constructor
+function Person(name, family, age) {
+  this.name = name;
+  this.age = age;
+  this.fullName = function () {
+    return this.name;
+  };
+}
+var iman = new Person("iman", 20);
+console.log(iman.fullName());

@@ -172,3 +172,5 @@ function Person(name, family, age) {
 }
 var iman = new Person("iman", 20);
 console.log(iman.fullName());
+
+// DOM = Document Object Model
